@@ -1,0 +1,59 @@
+.class{
+    
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 300px 1fr;
+}
+
+#smallContainer{
+    grid-column: 2/3;
+}
+
+.card{
+    background-color: white;
+    padding: 20px;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 18px #888888;
+    margin: 10px;
+}
+.card img{
+    width: 100%;
+    max-height: 300px;
+}
+
+body{
+background-color:lightgray;
+}
+
+.info{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    padding: 20px;
+    background-color: navy;
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.info>input,textarea {
+    width: 100%;
+}
+
+#asc_desc{
+    grid-column: 3/4;
+    grid-row: 2/3;
+
+    height: 150px;
+    width: 150px;
+    align-self: center;
+    justify-self: center;
+}
+
+#makePost{
+    width: 100%;
+    margin-top: 20px;
+}

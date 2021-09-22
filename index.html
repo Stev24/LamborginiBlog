@@ -1,0 +1,49 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./index.css" />
+		<title>Document</title>
+	</head>
+	<body onload="getAllPosts(asc)">
+		<h1>The Lamborgini Blog</h1>
+		<div class="container" id="container">
+            <div class="info">
+                <label for="title">Title</label>
+                <input type="text" name="title">
+                <label for="image">Image</label>
+                <input type="text" name="image">
+                <label for="description">Description</label>
+                <textarea name="description" rows="5" ></textarea>
+                <button id="makePost">Post!</button>
+            </div>
+            <button id="asc_desc">Asc/Desc</button>
+            <div id="smallContainer"></div>
+            <!--
+			<div class="card post">
+				<h2>Lamborgini 1</h2>
+				<img
+					src="https://cdn.motor1.com/images/mgl/Q8bqN/s1/lamborghini-aventador-svj.webp"
+					alt=""
+				/>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+					Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
+					sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a,
+					semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie,
+					enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper.
+					Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim.
+					Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras
+					vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit
+					odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum
+					ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+					Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum.
+					Maecenas adipiscing ante non diam sodales hendrerit.
+				</p>
+			</div>-->
+		</div>
+
+		<script src="./index.js"></script>
+	</body>
+</html>

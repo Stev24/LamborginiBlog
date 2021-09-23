@@ -1,59 +1,92 @@
-.class{
-    
+.class {
 }
 
-.container{
-    display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
-    grid-template-rows: 300px 1fr;
+.container {
+	display: grid;
+	grid-template-columns: 33.33% 33.33% 33.33%;
+	grid-template-rows: 300px 1fr;
 }
 
-#smallContainer{
-    grid-column: 2/3;
+#smallContainer {
+	grid-column: 2/3;
 }
 
-.card{
-    background-color: white;
-    padding: 20px;
-    border: 1px solid;
-    padding: 10px;
-    box-shadow: 5px 10px 18px #888888;
-    margin: 10px;
+.card {
+	background-color: white;
+	padding: 20px;
+	border: 1px solid;
+	padding: 10px;
+	box-shadow: 5px 10px 18px #888888;
+	margin: 10px;
 }
-.card img{
-    width: 100%;
-    max-height: 300px;
-}
-
-body{
-background-color:lightgray;
+.card img {
+	width: 100%;
+	max-height: 300px;
 }
 
-.info{
-    grid-column: 3/4;
-    grid-row: 1/2;
-    padding: 20px;
-    background-color: navy;
-    color: white;
-    font-weight: bold;
-    margin: 10px;
+body {
+	background-color: lightgray;
 }
 
-.info>input,textarea {
-    width: 100%;
+.info {
+	grid-column: 3/4;
+	grid-row: 1/2;
+	padding: 20px;
+	background-color: navy;
+	color: white;
+	font-weight: bold;
+	margin: 10px;
 }
 
-#asc_desc{
-    grid-column: 3/4;
-    grid-row: 2/3;
-
-    height: 150px;
-    width: 150px;
-    align-self: center;
-    justify-self: center;
+.info > input,
+textarea {
+	width: 100%;
 }
 
-#makePost{
-    width: 100%;
-    margin-top: 20px;
+#asc_desc {
+	grid-column: 3/4;
+	grid-row: 2/3;
+
+	height: 150px;
+	width: 150px;
+	align-self: center;
+	justify-self: center;
+}
+
+#makePost {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.date {
+	font-size: 1em;
+	font-weight: bold;
+	color: green;
+}
+
+/* The animation code */
+@keyframes example {
+	0% {
+		background-color: white;
+		color: navy;
+	}
+	50% {
+		background-color: navy;
+		color: white;
+	}
+	100% {
+		background-color: white;
+		color: navy;
+	}
+}
+
+/* The element to apply the animation to */
+#mainTitle {
+	animation-name: example;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

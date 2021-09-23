@@ -15,6 +15,7 @@ var arrayOfPosts = [
             ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
             Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum.
             Maecenas adipiscing ante non diam sodales hendrerit.`,
+		date: new Date(2018, 8, 22, 15, 0, 0),
 	},
 	{
 		title: "Lamborgini 2",
@@ -32,6 +33,7 @@ var arrayOfPosts = [
             ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
             Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum.
             Maecenas adipiscing ante non diam sodales hendrerit.`,
+		date: new Date(2020, 12, 22, 05, 0, 0),
 	},
 	{
 		title: "Lamborgini 3",
@@ -49,6 +51,7 @@ var arrayOfPosts = [
             ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
             Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum.
             Maecenas adipiscing ante non diam sodales hendrerit.`,
+		date: new Date(2021, 8, 24, 15, 55, 0),
 	},
 ];
 
@@ -77,6 +80,14 @@ const createPost = (i) => {
 	const title = document.createElement("h2");
 	title.innerText = arrayOfPosts[i].title;
 	post.appendChild(title);
+
+	const date = document.createElement("p");
+	date.className = "date";
+	date.innerText =
+		arrayOfPosts[i].date.toLocaleDateString() +
+		" " +
+		arrayOfPosts[i].date.toLocaleTimeString();
+	post.appendChild(date);
 	// we add image
 	const image = document.createElement("img");
 	image.src = arrayOfPosts[i].image;
@@ -95,11 +106,13 @@ const makePostButton = document.getElementById("makePost");
 makePostButton.addEventListener("click", () => {
 	const inputs = document.getElementsByTagName("input");
 	const textarea = document.getElementsByTagName("textarea");
+	const date = new Date();
 	//save the post in the array
 	arrayOfPosts.push({
 		title: inputs[0].value,
 		image: inputs[1].value,
-		description: textarea.value,
+		description: textarea[0].value,
+		date: date,
 	});
 	//console.log({title: inputs[0].value, image: inputs[1].value, description: textarea.value});
 	containerOfPosts.innerHTML = "";
